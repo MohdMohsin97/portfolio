@@ -1,11 +1,8 @@
 import React from 'react'
-import {card} from '@repo/ui'
+
 const page = () => {
   return (
-    <>
-      page
-      <card></card>
-    </>
+    <div>page</div>
   )
 }
 
