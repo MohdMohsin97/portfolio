@@ -1,7 +1,7 @@
 import "./globals.css";
 import "ui/styles.css";
 import type { Metadata } from "next";
-import { Profile } from 'ui'
+import { Profile } from "ui";
 
 export const metadata: Metadata = {
   title: "Mohd Mohsin",
@@ -16,8 +16,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex ">
-        <header className="w-1/4">
-          <Profile className=" w-100 h-100 overflow-hidden rounded-full object-cover"/>
+        <header className="w-1/4 h-screen">         
+            <Profile />
         </header>
         <div className="w-3/4">{children}</div>
       </body>
