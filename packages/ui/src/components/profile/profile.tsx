@@ -29,7 +29,7 @@ const socials: SocialType[] = [
 
 export const Profile = (): JSX.Element => {
   return (
-    <div className="grid justify-center items-center">
+    <section className="grid justify-center items-center">
       <div className=" grid justify-center items-center">
         <img
           alt="profile"
@@ -41,6 +41,6 @@ export const Profile = (): JSX.Element => {
       <div className="flex justify-center">
       {socials.map((social,i) => <Social name={social.name} link={social.link} svg={social.svg} />)}
       </div>
-    </div>
+    </section>
   );
 };

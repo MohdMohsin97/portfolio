@@ -2,6 +2,6 @@
 import "./styles.css";
 
 // components
-export * from "./card";
 export { Profile } from "./components/profile";
 export { Navbar } from "./components/navbar";
+export { HomePage, About, Resume, Contact } from './components/dashboard'

@@ -15,12 +15,12 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      <body className="flex ">
-        <header className="w-1/5 h-screen bg-[#1D3557]">         
+      <body className="flex">
+        <header className="w-1/6 h-screen bg-[#040b14] fixed top-0 left-0 block">         
             <Profile />
             <Navbar />
         </header>
-        <div className="w-4/5">{children}</div>
+        <div className="w-5/6 absolute top-0 right-0">{children}</div>
       </body>
     </html>
   );

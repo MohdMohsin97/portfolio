@@ -9,7 +9,7 @@ export type NavTypes = {
 const navs: NavTypes[] = [
   {
     name: "Home",
-    link: "#",
+    link: "#home",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@ const navs: NavTypes[] = [
   },
   {
     name: "About",
-    link: "#",
+    link: "#about",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ const navs: NavTypes[] = [
   },
   {
     name: "Resume",
-    link: "#",
+    link: "#resume",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,7 @@ const navs: NavTypes[] = [
   },
   {
     name: "Contact",
-    link: "#",
+    link: "#contact",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -99,10 +99,10 @@ const navs: NavTypes[] = [
 
 export const Navbar = () => {
   return (
-    <div>
+    <section>
       {navs.map((nav) => (
         <Nav name={nav.name} link={nav.link} svg={nav.svg} />
       ))}
-    </div>
+    </section>
   );
 };
