@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import { Nav } from "./nav";
 export type NavTypes = {
   name: String;
-  link: String;
+  link: string;
   svg: ReactElement;
 };
 
@@ -99,7 +99,7 @@ const navs: NavTypes[] = [
 
 export const Navbar = () => {
   return (
-    <section>
+    <section className="flex">
       {navs.map((nav) => (
         <Nav name={nav.name} link={nav.link} svg={nav.svg} />
       ))}

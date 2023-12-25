@@ -20,6 +20,7 @@
     "packages/*"
   ],
   "dependencies": {
+    "gsap": "^3.12.4",
     "lucide-react": "^0.294.0"
   }
 }
