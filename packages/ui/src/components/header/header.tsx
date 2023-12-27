@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactElement, useEffect, useRef } from "react";
+import { ReactElement} from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Profile } from "../profile";
@@ -68,21 +68,22 @@ const socials: SocialType[] = [
   },
 ];
 
-export const Header = () => {
+export const Header = ({useEffect, useRef}) => {
   gsap.registerPlugin(ScrollTrigger);
   
-  const headerRef = useRef(null);
+  let headerRef: HTMLDivElement | null = useRef(null);
 
   useEffect(() => {
     const showHead = gsap
       .fromTo(
-        headerRef.current,
+        headerRef,
         {
-          opacity: 0,
+          top: 0,
+          duration: 0.5,
+          
         },
         {
-          opacity: 1,
-          duration: 0.4,
+          top: "-60px",
         }
       )
       .progress(1);
@@ -90,21 +91,21 @@ export const Header = () => {
       start: "top top",
       end: "max",
       onUpdate: (self) => {
-        self.direction === -1 ? showHead.play() : showHead.reverse();
+        self.direction === 1 ? showHead.play() : showHead.reverse();
       },
     });
   });
 
   return (
     <div
-      id="header"
-      className={`w-full flex justify-around bg-[#040b14] sticky transtion-[top] duration-[0.5] top-0 `}
+      ref={el => {headerRef = el}}
+      className={`w-full flex justify-around bg-[#040b14] sticky top-0 z-50`}
     >
       <Profile />
       <Navbar />
       <div className="flex justify-center items-center">
         {socials.map((social, i) => (
-          <Social name={social.name} link={social.link} svg={social.svg} />
+          <Social key = {i} name={social.name} link={social.link} svg={social.svg} />
         ))}
       </div>
     </div>

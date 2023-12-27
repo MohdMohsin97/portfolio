@@ -1,12 +1,10 @@
+"use client";
+
 import "./globals.css";
 import "ui/styles.css";
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 import { Header } from "ui";
-
-export const metadata: Metadata = {
-  title: "Mohd Mohsin",
-  description: "Portfolio",
-};
+import { useEffect, useRef } from "react";
 
 export default function RootLayout({
   children,
@@ -16,8 +14,10 @@ export default function RootLayout({
   return (
     <html className="scroll-smooth" lang="en">
       <body>
-        <Header />
+        <section>
+        <Header useEffect={useEffect} useRef={useRef} />
         <div className=" ">{children}</div>
+        </section>
       </body>
     </html>
   );

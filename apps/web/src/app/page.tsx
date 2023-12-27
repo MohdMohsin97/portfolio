@@ -1,15 +1,16 @@
 import { Contact } from "ui";
 import { About, Resume, HomePage } from "ui";
 
-
 const Home = (): JSX.Element => {
-  return <section>
-      <div className="fixed bg-[url('/assests/background.jpg')] bg-cover w-full h-screen -z-10"></div>
+  return (
+    <section>
+      <div className="fixed w-full h-screen -z-10"></div>
       <HomePage />
-      <About />
       <Resume />
+      <About />
       <Contact />
-  </section>;
+    </section>
+  );
 };
 
 export default Home;
